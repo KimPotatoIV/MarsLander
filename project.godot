@@ -18,8 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GM="*res://manager/g_m.gd"
-SM="*res://manager/s_m.gd"
-SB="*res://manager/s_b.gd"
 
 [display]
 

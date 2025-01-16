@@ -30,12 +30,14 @@ func _ready() -> void:
 ##################################################
 func _process(delta: float) -> void:
 	update_hud()
+	# ahems UI 업데이트
 
 ##################################################
 func update_hud() -> void:
 	score_label.text = str(GM.get_score()).pad_zeros(4)
 	time_label.text = str(int(GM.get_time_left()) / 60).pad_zeros(2) + \
 		":" + str(int(GM.get_time_left()) % 60).pad_zeros(2)
+	# 60으로 나눈 몫은 분, 나머지는 초
 	fuel_label.text = str(int(GM.get_fuel())).pad_zeros(4)
 	
 	altitude_label.text = str(GM.get_altitude()).pad_zeros(4)

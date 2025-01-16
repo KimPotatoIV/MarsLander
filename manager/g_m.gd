@@ -8,9 +8,11 @@ var timer: Timer
 var fuel: float = 1000.0
 
 var altitude: float
+# 고도
 var horizontal_speed: float
+# 좌우 이동량
 var vertical_speed: float
-
+# 상하 이동량
 var game_over: bool = false
 
 ##################################################
@@ -21,11 +23,13 @@ func _ready() -> void:
 	add_child(timer)
 	timer.start()
 	timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+	# 시간 제한 타이머를 설정 후 timeout 시 _on_timer_timeout 함수에 연결
 
 ##################################################
 func _process(delta: float) -> void:
 	if game_over:
 		timer.paused = true
+	# 게임 오버 시 시간 제한 타이머 정지
 
 ##################################################
 func _on_timer_timeout() -> void:
@@ -54,6 +58,8 @@ func set_fuel(value: float) -> void:
 ##################################################
 func get_altitude() -> float:
 	return SCREEN_SIZE.y - int(altitude)
+	# 화면 세로 크기에서 빼야 고도가 제대로 나타남
+	# 고도 엔진은 2D Y축이 위에서 아래로 향하기 때문
 
 ##################################################
 func set_altitude(value: float) -> void:
