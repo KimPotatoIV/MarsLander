@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bjxj8vx8fah5h"]
+
+[ext_resource type="FontFile" uid="uid://bs66m8hlxw5hn" path="res://fonts/NeoDunggeunmoPro-Regular.ttf" id="1_7iskp"]
+
+[resource]
+font = ExtResource("1_7iskp")
+font_size = 48

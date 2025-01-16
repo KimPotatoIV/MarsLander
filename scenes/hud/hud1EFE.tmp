@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=3 uid="uid://hct8dnsqe6tk"]
+
+[ext_resource type="Script" path="res://scenes/hud/hud.gd" id="1_q7ycu"]
+[ext_resource type="LabelSettings" uid="uid://bjxj8vx8fah5h" path="res://scenes/hud/hud_label_settings.tres" id="1_vy8pk"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_q7ycu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LMarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LMarginContainer"]
+layout_mode = 2
+
+[node name="LVBoxContainer" type="VBoxContainer" parent="HBoxContainer/LMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreLabelT" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "SCORE    "
+label_settings = ExtResource("1_vy8pk")
+
+[node name="TimeLabelT" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "TIME
+"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="FuelLabelT" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "FUEL
+"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="RVBoxContainer" type="VBoxContainer" parent="HBoxContainer/LMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="TimeLabel" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+text = "00:00"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="FuelLabel" type="Label" parent="HBoxContainer/LMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="RMarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RMarginContainer"]
+layout_mode = 2
+
+[node name="LVBoxContainer" type="VBoxContainer" parent="HBoxContainer/RMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="AltitudeLabelT" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "ALTITUDE"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="HorizontalSpeedLabelT" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "HORIZONTAL SPEED    "
+label_settings = ExtResource("1_vy8pk")
+
+[node name="VerticalSpeedLabelT" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/LVBoxContainer"]
+layout_mode = 2
+text = "VERTICAL SPEED"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="RVBoxContainer" type="VBoxContainer" parent="HBoxContainer/RMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="AltitudeLabel" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="HorizontalSpeedLabel" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "000"
+label_settings = ExtResource("1_vy8pk")
+
+[node name="VerticalSpeedLabel" type="Label" parent="HBoxContainer/RMarginContainer/HBoxContainer/RVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "000"
+label_settings = ExtResource("1_vy8pk")

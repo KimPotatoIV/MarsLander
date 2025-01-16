@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd6wa8f0wfm13"]
+
+[ext_resource type="Script" path="res://scenes/items/drum/drum.gd" id="1_eul48"]
+[ext_resource type="Texture2D" uid="uid://su17qdwbvwtl" path="res://scenes/items/drum/item_drum.png" id="1_yue50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40ahc"]
+size = Vector2(19, 32)
+
+[node name="Drum" type="Area2D"]
+script = ExtResource("1_eul48")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yue50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_40ahc")
